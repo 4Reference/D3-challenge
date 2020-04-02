@@ -1,5 +1,6 @@
 # D3-challenge
 Homework for Week 16 D3.js
+[Click Here to Visit Page](https://4reference.github.io/D3-challenge/D3_data_journalism/index.html)
 
 # D3 Homework - Data Journalism and D3
 
