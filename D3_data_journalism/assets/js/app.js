@@ -136,9 +136,9 @@ d3.csv("assets/data/data.csv").then((data, err) => {
     .data(data)
     .enter()
     .append("circle")
+    .attr("r", 20)
     .attr("cx", d => xlin(d[xaxis]))
     .attr("cy", d => ylin(d[yaxis]))
-    .attr("r", 15)
     .attr("fill", "lightblue")
     .attr("opacity", ".75");
   crclgrp = updTT(crclgrp);
