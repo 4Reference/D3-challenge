@@ -25,8 +25,8 @@ let yaxis = yvar[0];
 let getlin = (data, slctaxis) => {
   let rangearr = [0, width];
   if (slctaxis == yaxis) rangearr = [height, 0];
-  let min = d3.min(data, d => d[slctaxis]);
   let max = d3.max(data, d => d[slctaxis]);
+  let min = d3.min(data, d => d[slctaxis]);
   let padd = (max - min) * 0.1;
   let lin = d3.scaleLinear()
     .domain([min - padd, max + padd])
