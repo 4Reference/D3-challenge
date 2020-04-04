@@ -68,7 +68,6 @@ let makeabbr = (abbrgrp, newscale, slctaxis) => {
   abbrgrp.transition()
     .duration(750)
     .attr(axis, d => newscale(d[slctaxis]));
-  updTT(abbrgrp);
   return abbrgrp;
 }
 let setlbl = (lblgrp, d, labels) => {
