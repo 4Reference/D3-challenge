@@ -68,6 +68,7 @@ let makeabbr = (abbrgrp, newscale, slctaxis) => {
   abbrgrp.transition()
     .duration(750)
     .attr(axis, d => newscale(d[slctaxis]));
+  updTT(abbrgrp);
   return abbrgrp;
 }
 let setlbl = (lblgrp, d, labels) => {
@@ -151,6 +152,7 @@ d3.csv("assets/data/data.csv").then((data, err) => {
     .attr("x", d => xlin(d[xaxis]))
     .attr("y", d => ylin(d[yaxis]))
     .attr("dy", 5);
+  abbrgrp = updTT(abbrgrp);
   xlblgrp.selectAll("text")
     .on("click", () => {
       handleOnClickLabel(d3.event.target, data, 'x', xlabels, xAxis, crclgrp, abbrgrp);
